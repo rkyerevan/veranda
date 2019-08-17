@@ -1,7 +1,6 @@
 $description-font-size: 1.125rem;
 
 .post {
-
   padding-top: 9.0625rem;
   position: relative;
   display: flex;
@@ -49,7 +48,6 @@ $description-font-size: 1.125rem;
   }
 
   @media (max-width: 1199.98px) {
-
     span {
       padding-top: 1.25rem;
       padding-right: 8.75rem;
@@ -80,6 +78,7 @@ $description-font-size: 1.125rem;
     flex-direction: column;
     padding-top: 4.125rem;
 
+    // TODO de jogir
     > div {
       padding-right: 3.9375rem !important;
     }
@@ -96,7 +95,6 @@ $description-font-size: 1.125rem;
     }
 
     &:nth-child(2n) {
-
       flex-direction: column;
       > div {
         padding-left: 3.9375rem !important;

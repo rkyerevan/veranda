@@ -2,28 +2,29 @@ footer {
   padding-top: 5rem;
   padding-bottom: 4.5rem;
   background-color: black;
+
   li {
     display: inline-block;
   }
 
-  span{
+  span {
     padding-top: 22px;
   }
 
-  > div{
+  > div {
     flex-direction: row;
   }
-  
+
   @media (max-width: 991px) {
     margin-top: 9.0625rem;
-    > div{
+    > div {
       flex-direction: column-reverse;
     }
 
-    .socials-wrap{
+    .socials-wrap {
       justify-content: center;
 
-      ul{
+      ul {
         padding: unset;
       }
     }
@@ -37,27 +38,24 @@ footer {
     display: flex;
 
     li {
-      &:first-child{
+      &:first-child {
         margin: unset;
       }
     }
   }
 
   @media (max-width: 991px) {
-    .menu-list{
+    .menu-list {
       display: none;
     }
 
-    .footer-nav{
+    .footer-nav {
       display: flex;
       flex-direction: column;
-      li{
-        padding: unset;
-        padding-top: 20px;
+
+      li {
+        padding: 20px 0 0 0;
       }
     }
   }
-
-
-
 }

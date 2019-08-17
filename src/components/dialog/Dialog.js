@@ -1,6 +1,28 @@
 import './_dialog.scss'
 import React from 'react';
 
+const menu = {
+  coldApetizers: [
+    'Cheese Plate',
+    'Charcuterie Plate',
+    'Seafood Salad',
+    'Vinegret Salad',
+    'Strawberry Salad',
+    'Jalapeño Lebni',
+    'Yerevan Salad',
+    'Stuffed Eggplants',
+    'Avocado Salad',
+    'Armenian Salad',
+    'Beef Tongue',
+    'Basturma and Sujukh',
+    'Bacon Wrapped Jalapeño',
+    'Smoked Fish Assortment',
+    'Olive Assortments',
+    'Red Caviar',
+    'Pickles'
+  ]
+}
+
 const Dialog = (props) => {
   console.log(props)
   return (
@@ -9,43 +31,32 @@ const Dialog = (props) => {
         <div className='dialog-header d-flex justify-content-between align-items-start'>
           <span>{props.title}</span>
 
-          <img onClick={props.onClose} src={require('./../../assets/icons/Close.svg')}/>
+          <img onClick={props.onClose} src={require('./../../assets/icons/Close.svg')} alt="" />
         </div>
         <div className="dialog-body">
-
+          {/* TODO don't put anything between <ul> and <li> ara */}
           <ul className='list row'>
             <div className='col-5'>
-            <li><span>Cold Apetizers</span>
-              <ul>
-                <li>Cheese Plate</li>
-                <li>Charcuterie Plate</li>
-                <li>Seafood Salad</li>
-                <li>Vinegret Salad</li>
-                <li>Strawberry Salad</li>
-                <li>Jalapeño Lebni</li>
-                <li>Yerevan Salad</li>
-                <li>Stuffed Eggplants</li>
-                <li>Avocado Salad</li>
-                <li>Armenian Salad</li>
-                <li>Beef Tongue</li>
-                <li>Basturma and Sujukh</li>
-                <li>Bacon Wrapped Jalapeño</li>
-                <li>Smoked Fish Assortment</li>
-                <li>Olive Assortments</li>
-                <li>Red Caviar</li>
-                <li>Pickles</li>
-              </ul>
-            </li>
-            <li><span>Hot Appetizers</span>
-              <ul>
-                <li>Blinchik with Mushroom Sauce</li>
-                <li>Sauteed wild Mushrooms</li>
-                <li>Garlic Shrimp Saute</li>
-              </ul>
-            </li>
+              <li>
+                <span className="title">Cold Apetizers</span>
+                <ul>
+                  {menu.coldApetizers.map(item => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </li>
+              <li>
+                <span className="title">Hot Appetizers</span>
+                <ul>
+                  <li>Blinchik with Mushroom Sauce</li>
+                  <li>Sauteed wild Mushrooms</li>
+                  <li>Garlic Shrimp Saute</li>
+                </ul>
+              </li>
             </div>
             <div className="col-5">
-            <li><span>Entrees</span>
+            <li>
+              <span className="title">Entrees</span>
               <ul>
                 <li>Beef Kabob</li>
                 <li>Chicken Kabob</li>
@@ -54,7 +65,8 @@ const Dialog = (props) => {
               </ul>
             </li>
 
-            <li><span>Extras</span>
+            <li>
+              <span className="title">Extras</span>
               <ul>
                 <li>Filet Mignon Medallion</li>
                 <li>Seafood Combination</li>
@@ -72,10 +84,7 @@ const Dialog = (props) => {
               </ul>
             </li>
             </div>
-
           </ul>
-
-
         </div>
       </div>
     </div>

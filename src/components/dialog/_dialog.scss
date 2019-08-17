@@ -12,11 +12,9 @@ $menu-list-item-font-size: 1.125rem;
   left: 50%;
   margin-left: $dialog-left-margin;
   background-color: rgb(51, 51, 51);
-
 }
 
 .dialog-inner-wrap {
-  height: auto;
   display: block;
   overflow: auto;
   padding-left: 2.3125rem;
@@ -24,12 +22,13 @@ $menu-list-item-font-size: 1.125rem;
 
 .dialog-header {
   padding-top: 2.5rem;
+
   span {
     font-size: $dialog-title-font-size;
     font-style: italic;
   }
 
-  img{
+  img {
     padding-right: 1.875rem;
   }
 }
@@ -39,25 +38,22 @@ $menu-list-item-font-size: 1.125rem;
   float: left;
   width: 100%;
 
-  ul{
+  ul {
     margin: 0;
   }
-
 }
 
 .list {
-
   padding: 0;
+  text-align: left;
 
-  ul{
-    padding: 0;
-    text-align: left;
+  ul {
+    padding: 0 0 59px 0;
     font-size: $menu-list-item-font-size;
-    padding-bottom: 59px
   }
 
   li {
-    span {
+    .title {
       font-size: $menu-list-title-font-size;
       display: block;
       text-align: left;

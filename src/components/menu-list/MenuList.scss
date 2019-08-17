@@ -6,11 +6,8 @@ $menu-font-size: 1.5625rem;
 
   li {
     &:first-child {
-      margin-top: 3.75rem;
-
+      //margin-top: 3.75rem;
     }
-
-    border: 1px solid white;
     list-style-type: none;
     margin-bottom: .7rem;
 
@@ -29,26 +26,18 @@ $menu-font-size: 1.5625rem;
   }
 
   &.collapsable {
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
+    transition: opacity .8s ease-in-out;
   }
-  
-  
-  @media (max-width: 900px) {
 
+  @media (max-width: 900px) {
     li {
       &:first-child{
-        margin-top: 2.75rem;
+        //margin-top: 2.75rem;
       }
     }
 
-
-    a{
+    a {
       font-size: 1.125rem;
     }
-    
   }
-  
 }
-
-

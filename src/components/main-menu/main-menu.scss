@@ -6,8 +6,6 @@ $break-large: 1100px;
   padding-bottom: 1px;
 
   .menu-inner {
-    padding-top: 5.625rem;
-    padding-bottom: 5.625rem;
     margin: 0.625rem;
     border: 1px solid white;
     height: 15.7626875rem;
@@ -15,22 +13,22 @@ $break-large: 1100px;
     transition: height .8s, padding-top .8s ease-in-out;
     -webkit-backface-visibility: hidden;
 
+    .logoContainer {
+      padding: 90px 0;
+    }
+
     img {
       max-width: 338px;
       height: auto;
     }
 
     &:hover, &:active {
-      padding-top: 2.125rem;
-      height: 450px;
-      padding-bottom: unset;
+      height: 500px;
 
       & .collapsable {
         opacity: 1 !important;
       }
-
     }
-
   }
 
   @media (max-width: 991px) {
@@ -43,7 +41,7 @@ $break-large: 1100px;
 
       &:hover, &:active {
         padding-top: 0;
-        height: 338px;
+        height: 380px;
         padding-bottom: unset;
       }
 
@@ -78,25 +76,23 @@ $break-large: 1100px;
   display: none;
 }
 
+// TODO combine with .menu-wrap
 .menu-home-mobile {
   background-color: rgba(0, 0, 0, .63);
   padding-top: 1px;
   padding-bottom: 1px;
 
   .menu-inner {
-
     margin: 0.625rem;
     border: 1px solid white;
     height: 187px;
     overflow: hidden;
     transition: all .8s ease-in-out;
 
-    > div {
-      height: inherit;
-      display: flex;
-      justify-content: center;
+    .logoContainer {
+      padding: 70px 0;
     }
-    
+
     img {
       max-width: 179px;
       height: auto;
@@ -104,32 +100,26 @@ $break-large: 1100px;
       transition: all .8s ease-in-out;
     }
 
+    .collapsable {
+      opacity: 0;
+    }
+
     &:hover, &:active {
       padding-top: 0;
-      height: 338px;
-      padding-bottom: unset;
-
-      > div {
-        height: 100px;
-      }
-
-      > ul {
-
-      }
+      height: 450px;
+      //padding-bottom: unset;
 
       img {
         //padding-top: 25px;
       }
 
-      & .collapsable {
-        opacity: 1 !important;
+      .collapsable {
+        opacity: 1;
       }
 
       //@media (max-width: 900px) {
       //
       //}
-
     }
   }
-
 }

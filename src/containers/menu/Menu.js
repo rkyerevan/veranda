@@ -1,4 +1,3 @@
-import './menu.scss'
 import React, {useState} from 'react'
 import MainMenu from "../../components/main-menu/MainMenu";
 import PageTitle from "../../components/page-title/PageTitle";
@@ -7,11 +6,12 @@ import FeaturedDishes from "../../components/featured-dishes/FeaturedDishes";
 import Footer from "../../components/footer/Footer";
 import Dialog from "../../components/dialog/Dialog";
 
+import './menu.scss'
+
 const Menu = (props) => {
   console.log(props);
 
   const [isOpen, changeState] = useState(false);
-
 
   return (
     <div className='menu-background'>

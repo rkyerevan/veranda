@@ -1,11 +1,12 @@
-import './_menu-list.scss';
+import './MenuList.scss';
 import React from 'react';
 import {Link} from "react-router-dom";
 
 const MenuList = (props) => {
-  return(
+  return (
     <ul className={`menu-list ${props.className ? props.className : ""}`}>
       <li>
+        {/* TODO uppercase is a stylistic decision, needs to be in .scss */}
         <Link to='/menu'>MENU</Link>
       </li>
       <li>
