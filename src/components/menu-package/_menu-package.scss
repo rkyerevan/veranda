@@ -1,0 +1,61 @@
+$package-title-size: 2.1875rem;
+$package-text-size: 0.9375rem;
+
+.menu-package {
+  font-style: italic;
+  padding: 0.5625rem;
+  background-color: rgba(51, 51, 51, .44);
+
+  span {
+    font-size: $package-title-size;
+    padding-left: 2.25rem;
+    padding-right: 3.75rem;
+
+  }
+
+  p {
+    font-size: $package-text-size;
+    text-align: left;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem
+  }
+
+  button {
+    font-style: italic;
+    color: white;
+    margin-left: 2.4375rem;
+    margin-right: 1.25rem;
+    padding: 0.6875rem 2.125rem;
+    border: 1px solid rgb(112, 112, 112);
+    color: rgb(112, 112, 112);
+    border-radius: 22px;
+    background-color: unset;
+  }
+
+  @media (max-width: 1199.98px) {
+    div {
+      &:first-child {
+        padding-top: 1.4375rem;
+        padding-bottom: 0.8125rem;
+      }
+    }
+
+    p {
+      padding-top: 1.375rem;
+      padding-bottom: 1.0625rem;
+      padding-left: 2.0625rem;
+      padding-right: 2.0625rem;
+    }
+
+    button{
+      margin: unset;
+    }
+  }
+  
+  
+  @media (max-width: 991px) {
+    span{
+      padding: unset;
+    }
+  }
+}

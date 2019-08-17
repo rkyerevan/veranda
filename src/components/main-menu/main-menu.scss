@@ -1,0 +1,135 @@
+$break-large: 1100px;
+
+.menu-wrap {
+  background-color: rgba(0, 0, 0, .63);
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  .menu-inner {
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem;
+    margin: 0.625rem;
+    border: 1px solid white;
+    height: 15.7626875rem;
+    overflow: hidden;
+    transition: height .8s, padding-top .8s ease-in-out;
+    -webkit-backface-visibility: hidden;
+
+    img {
+      max-width: 338px;
+      height: auto;
+    }
+
+    &:hover, &:active {
+      padding-top: 2.125rem;
+      height: 450px;
+      padding-bottom: unset;
+
+      & .collapsable {
+        opacity: 1 !important;
+      }
+
+    }
+
+  }
+
+  @media (max-width: 991px) {
+    .menu-inner {
+      display: flex;
+      flex-direction: column;
+      padding-top: unset;
+      padding-bottom: unset;
+      height: 83px;
+
+      &:hover, &:active {
+        padding-top: 0;
+        height: 338px;
+        padding-bottom: unset;
+      }
+
+      img {
+        max-width: 150px;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+      }
+    }
+
+    div {
+      &:first-child {
+        position: relative;
+        padding-right: 14px;
+        padding-left: 14px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .burger {
+        display: block;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+}
+
+.burger {
+  display: none;
+}
+
+.menu-home-mobile {
+  background-color: rgba(0, 0, 0, .63);
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  .menu-inner {
+
+    margin: 0.625rem;
+    border: 1px solid white;
+    height: 187px;
+    overflow: hidden;
+    transition: all .8s ease-in-out;
+
+    > div {
+      height: inherit;
+      display: flex;
+      justify-content: center;
+    }
+    
+    img {
+      max-width: 179px;
+      height: auto;
+      //padding-top: 61px;
+      transition: all .8s ease-in-out;
+    }
+
+    &:hover, &:active {
+      padding-top: 0;
+      height: 338px;
+      padding-bottom: unset;
+
+      > div {
+        height: 100px;
+      }
+
+      > ul {
+
+      }
+
+      img {
+        //padding-top: 25px;
+      }
+
+      & .collapsable {
+        opacity: 1 !important;
+      }
+
+      //@media (max-width: 900px) {
+      //
+      //}
+
+    }
+  }
+
+}

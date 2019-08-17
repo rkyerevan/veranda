@@ -1,0 +1,13 @@
+$background-image: './../../assets/images/menu/bg.png';
+
+
+.menu-background {
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+
+}
+
+.page-title-wrap{
+  padding-top: 1.75rem;
+  padding-bottom: 2.125rem;
+}

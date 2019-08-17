@@ -1,0 +1,66 @@
+$dialog-max-width: 62.72rem;
+$dialog-max-height: 60.060625rem;
+$dialog-left-margin: -($dialog-max-width / 2);
+$dialog-title-font-size: 2.8125rem;
+$menu-list-title-font-size: 1.875rem;
+$menu-list-item-font-size: 1.125rem;
+
+.dialog {
+  top: 4.1875rem;
+  max-width: $dialog-max-width;
+  max-height: $dialog-max-height;
+  left: 50%;
+  margin-left: $dialog-left-margin;
+  background-color: rgb(51, 51, 51);
+
+}
+
+.dialog-inner-wrap {
+  height: auto;
+  display: block;
+  overflow: auto;
+  padding-left: 2.3125rem;
+}
+
+.dialog-header {
+  padding-top: 2.5rem;
+  span {
+    font-size: $dialog-title-font-size;
+    font-style: italic;
+  }
+
+  img{
+    padding-right: 1.875rem;
+  }
+}
+
+.dialog-body {
+  padding-top: 5rem;;
+  float: left;
+  width: 100%;
+
+  ul{
+    margin: 0;
+  }
+
+}
+
+.list {
+
+  padding: 0;
+
+  ul{
+    padding: 0;
+    text-align: left;
+    font-size: $menu-list-item-font-size;
+    padding-bottom: 59px
+  }
+
+  li {
+    span {
+      font-size: $menu-list-title-font-size;
+      display: block;
+      text-align: left;
+    }
+  }
+}

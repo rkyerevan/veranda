@@ -1,0 +1,12 @@
+$page-title-font: Bodoni72;
+
+.page-title{
+  color: white;
+  font-family: $page-title-font;
+  position: relative;
+  display: flex;
+  
+  hr{
+    border-color: white;
+  }
+}
