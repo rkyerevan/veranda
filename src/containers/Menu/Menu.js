@@ -6,7 +6,7 @@ import FeaturedDishes from "./../../components/FeaturedDishes/FeaturedDishes";
 import Footer from "./../../components/Footer/Footer";
 import Dialog from "./../../components/Dialog/Dialog";
 
-import './Menu.scss'
+import './_Menu.scss'
 import ComingSoonCard from "../../components/ComingSoonCard/ComingSoonCard";
 
 const Menu = () => {
