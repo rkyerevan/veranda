@@ -6,7 +6,7 @@ import MainMenu from "../../components/MainMenu/MainMenu";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import PageIntroduction from "./../../components/PageIntroduction/PageIntroduction";
 import Form from "../../components/Form/Form";
-import Footer from "../../components/Footer/Footer";
+import Footer from "./../../components/Footer/Footer";
 import ComingSoonCard from "../../components/ComingSoonCard/ComingSoonCard";
 
 const Quote = () => {
