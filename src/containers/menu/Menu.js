@@ -1,48 +1,48 @@
 import React, {useState} from 'react'
-import MainMenu from "../../components/main-menu/MainMenu";
-import PageTitle from "../../components/page-title/PageTitle";
-import MenuPackage from "../../components/menu-package/MenuPackage";
-import FeaturedDishes from "../../components/featured-dishes/FeaturedDishes";
-import Footer from "../../components/footer/Footer";
-import Dialog from "../../components/dialog/Dialog";
+import MainMenu from "../../components/MainMenu/MainMenu";
+import PageTitle from "./../../components/PageTitle/PageTitle";
+import MenuPackage from "../../components/MenuPackage/MenuPackage";
+import FeaturedDishes from "./../../components/FeaturedDishes/FeaturedDishes";
+import Footer from "./../../components/Footer/Footer";
+import Dialog from "./../../components/Dialog/Dialog";
 
-import './menu.scss'
+import './Menu.scss'
+import ComingSoonCard from "../../components/ComingSoonCard/ComingSoonCard";
 
-const Menu = (props) => {
-  console.log(props);
+const Menu = () => {
 
   const [isOpen, changeState] = useState(false);
 
   return (
-    <div className='menu-background'>
+    <div className='mainBackground'>
       <div className='container'>
-        <div className='row'>
-          <div className='col-12 col-lg-4 col- p-0 pt-3'>
+        <div className='row justify-content-center'>
+          <div className="menuWrap">
             <MainMenu/>
-            <div className='menu-wrap d-none d-lg-block'>
-              <div className='menu-inner'>
-                <img className='w-100 pr-3 pl-3' src={require('./../../assets/images/veranda_patio.svg')}/>
-              </div>
-            </div>
+            <ComingSoonCard/>
           </div>
-          <div className='col-lg-8 col-md-12 pb-2'>
-            <div className='page-title-wrap'>
-              <PageTitle/>
+          <div className='descriptionWrap'>
+            <div className='pageTitleWrap'>
+              <PageTitle
+                title="Menu"
+              />
             </div>
-            <div>
+            <div className="menuPackageContainer">
               <MenuPackage
                 title={'Package1'}
                 onClick={() => changeState(true)}
               />
             </div>
-            <div className='pt-3'>
+            <div className='menuPackageContainer'>
               <MenuPackage
                 title={'Package2'}
+                onClick={() => changeState(true)}
               />
             </div>
-            <div className='pt-3'>
+            <div className='menuPackageContainer'>
               <MenuPackage
                 title={'Package3'}
+                onClick={() => changeState(true)}
               />
             </div>
           </div>

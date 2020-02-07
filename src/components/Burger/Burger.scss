@@ -1,0 +1,49 @@
+@mixin burgerLine ($width, $top, $right){
+  background-color: white;
+  border-radius: 13px;
+  position: absolute;
+  height: 3px;
+  width: $width;
+  top: $top;
+  right: $right;
+
+}
+
+.Burger{
+  @include  burgerLine(100%, 33px, 17px);
+  max-width: 33px;
+  transition: all 200ms ease-in-out;
+
+
+  &:before{
+    content: " ";
+    @include burgerLine(22px, -8px, 5px);
+
+  }
+
+  &:after{
+    @include burgerLine(22px, 8px, 5px);
+    content: "";
+  }
+
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
+
+.BurgerActive {
+  @extend .Burger;
+  transform: rotate(45deg);
+
+  &:before {
+    content: none;
+  }
+
+  &:after {
+    width: 100%;
+    transform: rotate(90deg);
+    top: 0;
+    left: 0;
+  }
+}
+

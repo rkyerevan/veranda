@@ -1,0 +1,20 @@
+.contactInfoContainer{
+  padding-top: 61px;
+
+  @media (min-width: 992px) {
+    padding-top: 98px;
+  }
+}
+
+.mapContainer{
+  margin-top: 4.75rem;
+
+  @media(min-width: 992px){
+    width: 80%;
+    margin: 4.74rem auto;
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 1110px;
+  }
+}

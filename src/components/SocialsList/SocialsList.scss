@@ -1,0 +1,19 @@
+
+.linkSocial {
+  margin-right: 7px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  .fbIcon, .instaIcon, .youtubeIcon {
+    width: 57px;
+  }
+
+  @media (min-width: 992px) {
+    display: flex;
+    .fbIcon, .instaIcon, .youtubeIcon {
+      width: 34px;
+    }
+  }
+}

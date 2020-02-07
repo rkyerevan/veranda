@@ -1,22 +1,38 @@
 import React from 'react';
 
-import './_post.scss'
+import Embed from "../Embed/Embed";
+import SocialsList from "../SocialsList/SocialsList";
+
+import './Post.scss'
 
 const Post = (props) => {
+
+  const {embed, className, title, img, icon, text, socials, matchUrl} = props;
+
   return (
     <div className='post'>
-      <div className=' p-0 position-relative'>
-        <img className='w-100 h-auto' src={(props.img)}/>
-        <h2>{props.title}</h2>
+      <div className={`p-0 position-relative ${className ? className : "mediaContainer"}`}>
+        {embed ?
+          <div className="embed-responsive embed-responsive-16by9">
+            <Embed
+              embed={embed}
+              title={title}
+              width="100%"
+              height="526"
+              className="embed-responsive-item"
+            /></div> :
+          <div className="imageWrapper">
+            <img src={(img)} alt=""/>
+          </div>}
+        <h2 title={title}>{title}</h2>
       </div>
-      <span>
-        Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet
-        rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.
-        <br/>
-        <br/>
-        Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit
-        tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-      </span>
+      <div className={`infoContainer${matchUrl ? "__mobileDisplayNone" : ""}`}>
+        {icon && <img className="icon" src={icon} alt=""/>}
+        {text && text}
+        {socials && <div className="d-flex socialsContainer">
+          <SocialsList/>
+        </div>}
+      </div>
     </div>
   )
 }

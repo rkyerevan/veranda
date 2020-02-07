@@ -1,0 +1,7 @@
+.formContainer {
+  padding-top: 52px;
+
+  @media(min-width: 992px) {
+    padding-top: 102px;
+  }
+}

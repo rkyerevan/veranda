@@ -1,0 +1,70 @@
+$menu-font-size: 25px;
+$menu-font-size-mobile: 22px;
+$menu-font-size-mobile-home-page: 18px;
+$font-family: 'Playfair Display', serif;
+
+.menu-list {
+  width: 100%;
+  font-family: $font-family;
+  font-weight: bolder;
+  margin: 0;
+  padding: 113px 0 0 0;
+  font-size: $menu-font-size-mobile;
+  display: inline-block;
+
+  li {
+    list-style-type: none;
+
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 7px;
+      transition: background-color .2s ease-in-out;
+
+      &:hover {
+        background-color: rgba(177, 179, 180, .37);
+        width: 100%;
+      }
+    }
+  }
+
+  &.collapsable {
+    transition: opacity .8s ease-in-out;
+  }
+
+  @media (min-width: 576px) {
+    width: unset;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+      font-size: $menu-font-size;
+    }
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+
+    li {
+      display: block;
+      margin-bottom: .7rem;
+    }
+  }
+}
+
+.menu-list-homePage {
+  padding: 0;
+  li {
+    display: block;
+    font-size: $menu-font-size-mobile-home-page;
+  }
+
+  @media (min-width: 992px) {
+    li {
+      font-size: $menu-font-size;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+$font-family: 'Playfair Display', serif;
+
+.cardContainer {
+  font-family: $font-family;
+  max-width: 340px;
+  min-width: 338px;
+  min-height: 188px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 10px;
+  display: none;
+
+  .cardInner {
+    border: 1px solid #b1b3b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 230px;
+  }
+
+  svg {
+    max-width: 277px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 48px;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: #b1b3b4;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+
+}
+
+.cardContainerHome{
+  @extend .cardContainer;
+  display: unset;
+  max-width: 338px;
+  width: 100%;
+
+
+  .cardInner{
+    @extend .cardInner;
+    justify-content: center;
+    position: relative;
+    min-height: 173px;
+    height: auto;
+  }
+
+  svg{
+    max-width: 262px;
+    width: 100%;
+    height: auto;
+    margin-bottom: unset;
+  }
+
+  span{
+    margin-bottom: unset;
+    position: absolute;
+    bottom: 27px;
+  }
+
+  @media (min-width: 780px) {
+  }
+
+  @media (min-width: 992px) {
+    max-width: 450px;
+
+    .cardInner{
+      height: 230px;
+    }
+
+    svg{
+      max-width: 349px;
+    }
+
+  }
+}

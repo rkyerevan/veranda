@@ -1,0 +1,35 @@
+$page-title-font: Bodoni72;
+
+.pageTitleWrap {
+  display: flex;
+  flex-direction: row;
+
+  padding: 28px 0;
+
+  @media (min-width: 991px) and (max-width: 1199px) {
+    padding: 39px 0 !important;
+  }
+}
+
+.pageTitle {
+  color: white;
+  font-family: $page-title-font;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  hr {
+    width: 100%;
+    border-color: white;
+    margin: 0;
+    max-width: 52px;
+  }
+
+  @media (min-width: 991px) {
+    hr {
+      max-width: unset;
+    }
+  }
+}

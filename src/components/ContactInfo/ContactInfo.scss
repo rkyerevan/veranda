@@ -1,0 +1,21 @@
+
+address {
+  font-size: 26px;
+  font-style: italic;
+  margin: 0;
+
+  .infoLabel {
+    margin: 0;
+    color: #464646;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: unset;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.avatarContainer{
+  max-width: 149px;
+  margin-right: 35px;
+
+  &:last-child{
+    margin-right: unset;
+  }
+
+  .Avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

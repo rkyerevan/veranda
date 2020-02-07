@@ -1,16 +1,38 @@
 $background-image: './../../assets/images/home-page/shutterstock_709645828.png';
 
-.home-wrap {
+.homeContainer {
   background-image: url($background-image);
   background-color: rgba(0, 0, 0, .1);
   height: 100vh;
+  display: flex;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (max-width: 500px) {
-    .container {
-      flex-direction: column;
+  .homeInner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  .copywrite {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+
+  @media (min-width: 780px) {
+    .homeInner {
+      flex-direction: row;
+    }
+
+    .copywrite{
+      display: none;
     }
   }
 

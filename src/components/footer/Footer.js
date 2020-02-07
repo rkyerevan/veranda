@@ -1,25 +1,30 @@
-import './_footer.scss';
 import React from 'react';
-import MenuList from "../menu-list/MenuList";
-import FooterNav from "../footer-nav/FooterNav";
-import SocialsList from "../socials-list/SocialsList";
+
+import './Footer.scss';
+
+import {ReactComponent as Logo} from "./../../assets/images/logo.svg"
+import MenuList from "./../MenuList/MenuList";
+import FooterNav from "./../FooterNav/FooterNav";
+import SocialsList from "./../SocialsList/SocialsList";
 
 const Footer = () => {
-  return (<footer>
-    <div className='container d-flex justify-content-between'>
-      <div className="d-none d-lg-flex flex-column justify-content-center">
-        <img src={require('./../../assets/images/logo.svg')} alt=''/>
-        <span>Copyright 2019 Veranda Restaurant</span>
+  return (
+    <footer>
+      <div className='container d-flex p-0 footerInner'>
+        <div className="d-none d-lg-flex flex-column justify-content-center">
+          <Logo/>
+          <span className="copyright">Copyright 2019 Veranda Restaurant</span>
+        </div>
+        <div className='navWrap'>
+          <MenuList/>
+          <FooterNav/>
+        </div>
+        <div className="iconsContainer">
+          <SocialsList/>
+        </div>
       </div>
-      <div className='nav-wrap'>
-        <MenuList/>
-        <FooterNav/>
-      </div>
-      <div className="d-flex align-items-center socials-wrap">
-        <SocialsList/>
-      </div>
-    </div>
-  </footer>)
+    </footer>
+  )
 }
 
 export default Footer

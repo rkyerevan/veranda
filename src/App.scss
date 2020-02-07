@@ -19,3 +19,27 @@ $main-font: Bodoni72;
 ul {
   list-style-type: none
 }
+
+.descriptionWrap {
+  margin: 89px 0 0 0;
+  padding: 41px 0 0 0;
+  width: 100%;
+
+  @media (min-width: 576px) {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 63%;
+    padding: 0 0 0 20px;
+  }
+}
+
+.menuWrap {
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: unset;
+  }
+}
