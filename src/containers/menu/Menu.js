@@ -1,54 +1,54 @@
-import React, {useState} from 'react'
+import React, {useState} from "react"
 import MainMenu from "../../components/MainMenu/MainMenu";
 import PageTitle from "./../../components/PageTitle/PageTitle";
 import MenuPackage from "../../components/MenuPackage/MenuPackage";
 import FeaturedDishes from "./../../components/FeaturedDishes/FeaturedDishes";
 import Footer from "./../../components/Footer/Footer";
 import Dialog from "./../../components/Dialog/Dialog";
-
-import './Menu.scss'
 import ComingSoonCard from "../../components/ComingSoonCard/ComingSoonCard";
+
+import "./Menu.scss"
 
 const Menu = () => {
 
   const [isOpen, changeState] = useState(false);
 
   return (
-    <div className='mainBackground'>
-      <div className='container'>
-        <div className='row justify-content-center'>
+    <div className="mainBackground">
+      <div className="container">
+        <div className="row justify-content-center">
           <div className="menuWrap">
             <MainMenu/>
             <ComingSoonCard/>
           </div>
-          <div className='descriptionWrap'>
-            <div className='pageTitleWrap'>
+          <div className="descriptionWrap">
+            <div className="pageTitleWrap">
               <PageTitle
                 title="Menu"
               />
             </div>
             <div className="menuPackageContainer">
               <MenuPackage
-                title={'Package1'}
+                title={"Package1"}
                 onClick={() => changeState(true)}
               />
             </div>
-            <div className='menuPackageContainer'>
+            <div className="menuPackageContainer">
               <MenuPackage
-                title={'Package2'}
+                title={"Package2"}
                 onClick={() => changeState(true)}
               />
             </div>
-            <div className='menuPackageContainer'>
+            <div className="menuPackageContainer">
               <MenuPackage
-                title={'Package3'}
+                title={"Package3"}
                 onClick={() => changeState(true)}
               />
             </div>
           </div>
           {isOpen ?
             <Dialog
-              title={'Package1'}
+              title={"Package1"}
               onClose={() => changeState(false)}
             /> :
             null}

@@ -20,7 +20,7 @@ const Quote = () => {
             <ComingSoonCard/>
           </div>
           <div className="d-md-block descriptionWrap">
-            <div className='page-title-wrap'>
+            <div className="page-title-wrap">
               <PageTitle title="Quote"/>
             </div>
             <PageIntroduction/>
